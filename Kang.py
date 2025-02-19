@@ -16,7 +16,7 @@ from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.error import TelegramError
 from telegram.constants import ParseMode
 from telegram import Update, Bot
-from telegram.ext import CommandHandler, Updater, Handler, InlineQueryHandler
+from telegram.ext import CommandHandler, Updater, InlineQueryHandler
 from telegram.utils.helpers import escape_markdown
 
 from telegram import Message, Chat, MessageEntity, InlineQueryResultArticle
