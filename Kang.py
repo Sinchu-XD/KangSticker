@@ -26,6 +26,14 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(level
 logger = logging.getLogger()
 
 
+def getConfig(name: str):
+    return os.environ[name]
+
+try:
+    TOKEN = getConfig('TOKEN')
+except KeyError as e:
+    LOGGER.error("TOKEN env variables missing! Exiting now")
+    exit(1)
 
 updater = telegram.ext.Updater(token=TOKEN)
 bot = updater.bot
