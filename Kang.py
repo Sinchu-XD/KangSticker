@@ -32,7 +32,7 @@ def getConfig(name: str):
     return os.environ[name]
 
 try:
-    TOKEN = getConfig("BOT_TOKEN")
+    TOKEN = getConfig(BOT_TOKEN, "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
 except KeyError as e:
     LOGGER.error("TOKEN env variables missing! Exiting now")
     exit(1)
