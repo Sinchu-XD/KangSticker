@@ -16,7 +16,7 @@ from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.error import TelegramError
 from telegram.constants import ParseMode
 from telegram import Update, Bot
-from telegram.ext import CommandHandler, run_async, Updater, Handler, InlineQueryHandler
+from telegram.ext import CommandHandler, Updater, Handler, InlineQueryHandler
 from telegram.utils.helpers import escape_markdown
 
 from telegram import Message, Chat, MessageEntity, InlineQueryResultArticle
@@ -44,13 +44,13 @@ I only have a few commands so I don't have a help menu or anything like that.
 You can also check out the source code for the bot [here](https://github.com/JorDenXD/KangBot)
 """.format(dispatcher.bot.first_name)
 
-@run_async
+
 def start(bot: Bot, update: Update):
     if update.effective_chat.type == "private":
         update.effective_message.reply_text(START_TEXT, parse_mode=ParseMode.MARKDOWN)
 
 
-@run_async
+
 def kang(bot: Bot, update: Update, args: List[str]):
     msg = update.effective_message
     user = update.effective_user
@@ -166,7 +166,7 @@ def kang(bot: Bot, update: Update, args: List[str]):
         os.remove("kangsticker.png")
 
 
-@run_async
+
 def kangurl(bot: Bot, update: Update, args: List[str]):
     msg = update.effective_message
     user = update.effective_user
