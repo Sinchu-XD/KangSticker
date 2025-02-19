@@ -18,14 +18,14 @@ from telegram.constants import ParseMode
 from telegram import Update, Bot
 from telegram.ext import CommandHandler, Updater, InlineQueryHandler
 from telegram.helpers import escape_markdown
-from config import BOT_TOKEN
+
 from telegram import Message, Chat, MessageEntity, InlineQueryResultArticle
 from os import path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 LOGGER = logging.getLogger()
 
-TOKEN = os.environ.get(TOKEN, "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
+TOKEN = os.environ.get(BOT_TOKEN, "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
 
 
 
