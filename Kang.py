@@ -25,17 +25,13 @@ from os import path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 LOGGER = logging.getLogger()
 
-TOKEN = os.environ.get("TOKEN", "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
-
-updater = Updater(TOKEN)
-bot = updater.bot
-dispatcher = updater.dispatcher
+application = Application.builder().token(os.getenv("BOT_TOKEN")).build()
 
 START_TEXT = """
 Hey! I'm {}, and I'm a bot which allows you to create a sticker pack from other stickers, images and documents!
 I only have a few commands so I don't have a help menu or anything like that.
 You can also check out the source code for the bot [here](https://github.com/JorDenXD/KangBot)
-""".format(dispatcher.bot.first_name)
+""".format(application.bot.first_name)
 
 
 def start(bot: Bot, update: Update):
