@@ -26,7 +26,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(level
 logger = logging.getLogger()
 
 def getConfig(name: str):
-    return os.environ[name]
+    return os.environ[TOKEN]
 
 try:
     TOKEN = getConfig(TOKEN, "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
