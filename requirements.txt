@@ -1,4 +1,4 @@
 Pillow
 pyrogram
-python-telegram-bot==10.1.0
+python-telegram-bot
 TgCrypto
