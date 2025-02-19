@@ -7,4 +7,4 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN")
