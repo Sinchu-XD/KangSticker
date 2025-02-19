@@ -25,16 +25,13 @@ from os import path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger()
 
-def getConfig(name: str):
-    return os.environ[bot_token]
+if path.exists("config.py"):
+    import config
+else:
+    logger.error("config.py was not found")
+    exit(-1)
 
-try:
-    TOKEN = getConfig(bot_token)
-except KeyError as e:
-    LOGGER.error("TOKEN env variables missing! Exiting now")
-    exit(1)
-
-updater = telegram.ext.Updater(token=TOKEN)
+updater = telegram.ext.Updater(config.TOKEN)
 bot = updater.bot
 dispatcher = updater.dispatcher
 
