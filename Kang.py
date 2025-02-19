@@ -25,7 +25,7 @@ from os import path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 LOGGER = logging.getLogger()
 
-TOKEN = os.environ.get('TOKEN', "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
+TOKEN = os.environ.get(TOKEN, "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
 
 updater = Updater(token=TOKEN, use_context=True)
 bot = updater.bot
