@@ -31,7 +31,7 @@ else:
     logger.error("config.py was not found")
     exit(-1)
 
-updater = telegram.ext.Updater(config.TOKEN)
+updater = telegram.ext.Updater(token=config.TOKEN)
 bot = updater.bot
 dispatcher = updater.dispatcher
 
