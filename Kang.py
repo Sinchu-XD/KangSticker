@@ -26,10 +26,10 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(level
 logger = logging.getLogger()
 
 def getConfig(name: str):
-    return os.environ[TOKEN]
+    return os.environ[bot_token]
 
 try:
-    TOKEN = getConfig(TOKEN)
+    TOKEN = getConfig(bot_token)
 except KeyError as e:
     LOGGER.error("TOKEN env variables missing! Exiting now")
     exit(1)
