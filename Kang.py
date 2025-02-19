@@ -27,7 +27,7 @@ LOGGER = logging.getLogger()
 
 BOT_TOKEN="7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE"
 
-application = Application.builder().token(os.getenv("BOT_TOKEN")).build()
+application = Application.builder().token(os.getenv("BOT_TOKEN", "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")).build()
 
 START_TEXT = """
 Hey! I'm {}, and I'm a bot which allows you to create a sticker pack from other stickers, images and documents!
