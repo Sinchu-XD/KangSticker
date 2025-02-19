@@ -25,17 +25,10 @@ from os import path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 LOGGER = logging.getLogger()
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
+TOKEN = os.environ.get("TOKEN", "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
 
 
-def getConfig(name: str):
-    return os.environ[name]
 
-try:
-    TOKEN = getConfig('BOT_TOKEN')
-except KeyError as e:
-    LOGGER.error("TOKEN env variables missing! Exiting now")
-    exit(1)
 
 updater = telegram.ext.Updater(token=TOKEN)
 bot = updater.bot
