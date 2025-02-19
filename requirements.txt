@@ -2,3 +2,4 @@ Pillow
 pyrogram
 python-telegram-bot
 TgCrypto
+python-dotenv
