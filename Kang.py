@@ -27,7 +27,7 @@ LOGGER = logging.getLogger()
 
 TOKEN = os.environ.get("TOKEN", "7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE")
 
-updater = Updater(TOKEN, use_context=True)
+updater = Updater(TOKEN)
 bot = updater.bot
 dispatcher = updater.dispatcher
 
