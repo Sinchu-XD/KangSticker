@@ -18,7 +18,7 @@ from telegram.constants import ParseMode
 from telegram import Update, Bot
 from telegram.ext import CommandHandler, Updater, InlineQueryHandler
 from telegram.helpers import escape_markdown
-
+from config import BOT_TOKEN
 from telegram import Message, Chat, MessageEntity, InlineQueryResultArticle
 from os import path
 
@@ -30,7 +30,7 @@ def getConfig(name: str):
     return os.environ[name]
 
 try:
-    TOKEN = getConfig('TOKEN')
+    TOKEN = getConfig(BOT_TOKEN)
 except KeyError as e:
     LOGGER.error("TOKEN env variables missing! Exiting now")
     exit(1)
