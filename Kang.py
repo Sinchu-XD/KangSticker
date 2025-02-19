@@ -25,7 +25,7 @@ from os import path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 LOGGER = logging.getLogger()
 
-BOT_TOKEN=7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE
+BOT_TOKEN="7359320765:AAHJVq1auPbMD-CtXAT_vAENIyD9if82JpE"
 
 application = Application.builder().token(os.getenv("BOT_TOKEN")).build()
 
