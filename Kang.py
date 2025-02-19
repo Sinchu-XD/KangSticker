@@ -18,20 +18,16 @@ from telegram.constants import ParseMode
 from telegram import Update, Bot
 from telegram.ext import CommandHandler, Updater, InlineQueryHandler
 from telegram.helpers import escape_markdown
-
+from config import TOKEN
 from telegram import Message, Chat, MessageEntity, InlineQueryResultArticle
 from os import path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger()
 
-if path.exists("config.py"):
-    import config
-else:
-    logger.error("config.py was not found")
-    exit(-1)
 
-updater = telegram.ext.Updater(token=config.TOKEN)
+
+updater = telegram.ext.Updater(token=TOKEN)
 bot = updater.bot
 dispatcher = updater.dispatcher
 
